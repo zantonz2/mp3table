@@ -23,6 +23,6 @@
 
 </table>
 
-<span class="playName">{{selectedItem?.name ?? ''}}</span>
-<audio controls #audio></audio>
+<span class="playName" [hidden]="!selectedItem">{{selectedItem?.name}}</span>
+<audio controls #audio [hidden]="!selectedItem"></audio>
 

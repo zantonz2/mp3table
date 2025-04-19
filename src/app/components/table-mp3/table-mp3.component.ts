@@ -1,6 +1,6 @@
 import { MatTableModule } from '@angular/material/table';
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { NgClass } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-table-mp3',
@@ -9,7 +9,8 @@ import { NgClass } from '@angular/common';
   standalone: true,
   imports: [
     MatTableModule,
-    NgClass
+    NgClass,
+    NgIf
   ]
 })
 export class TableMP3Component {
