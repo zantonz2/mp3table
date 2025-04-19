@@ -1,0 +1,28 @@
+<table mat-table [dataSource]="audioList">
+
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef class="table_id"> ID </th>
+    <td mat-cell *matCellDef="let item"> {{item.id}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Звук </th>
+    <td mat-cell *matCellDef="let item"> {{item.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="fileName">
+    <th mat-header-cell *matHeaderCellDef> Файл </th>
+    <td mat-cell *matCellDef="let item"> {{item.fileName}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let item; columns: displayedColumns;"
+    (click)="selectAudio(item)"
+    [ngClass]="{'selected': item === selectedItem}"
+  ></tr>
+
+</table>
+
+<span class="playName">{{selectedItem?.name ?? ''}}</span>
+<audio controls #audio></audio>
+

@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  justify-content: center;
+  &.isMobile {
+    display: block;
+  }
+}
+
+

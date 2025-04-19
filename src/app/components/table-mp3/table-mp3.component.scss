@@ -1,0 +1,32 @@
+$selectColor: rgb(0,152,0);
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  table {
+    &.isMobile {
+      width: 100%;
+    }
+    .table_id {
+      width: 77px;
+    }
+    tr {
+      &.selected {
+        background-color: rgba($selectColor, 0.25);
+        &:hover {
+          background-color: rgba($selectColor, 0.2);
+        }
+      }
+      &:hover {
+        background-color: rgba($selectColor, 0.12);
+      }
+    }
+  }
+  .playName {
+    margin-top:5px;
+    height: 24px;
+  }
+}
+
